@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Docsify Template</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="A template for Docsify repos." />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css"
+    />
+    <script src="//unpkg.com/docsify-edit-on-github@1.0.3/index.js"></script>
+  </head>
+
+  <body>
+    <div id="app">Loading…</div>
+    <script>
+      window.$docsify = {
+        homepage: "index.md",
+
+        name: "Docsify Template",
+        repo: "https://github.com/dialex/docsify-template",
+        ga: "",
+
+        coverpage: true,
+        loadSidebar: true,
+        subMaxLevel: 1,
+        auto2top: true,
+
+        plugins: [
+          EditOnGithubPlugin.create(
+            "https://github.com/dialex/docsify-template/tree/master/docs/"
+          ),
+        ],
+
+        alias: {
+          "/.*/_sidebar.md": "/_sidebar.md",
+        },
+      };
+    </script>
+    <script src="//unpkg.com/docsify@4.11.6/lib/docsify.min.js"></script>
+    <script src="//unpkg.com/docsify@4.11.6/lib/plugins/emoji.min.js"></script>
+    <script src="//unpkg.com/docsify@4.11.6/lib/plugins/ga.min.js"></script>
+  </body>
+</html>

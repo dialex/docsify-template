@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "node"
+
+install:
+  - npm run deps:install
+
+script:
+  - npm run ci:pipeline
+
+branches:
+  only:
+    - master
+
+notifications:
+  email:
+    on_failure: always
+    on_success: never
